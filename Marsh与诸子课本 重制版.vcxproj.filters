@@ -13,10 +13,68 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\Functions">
+      <UniqueIdentifier>{61990bb7-1860-42bb-b8c6-30a69cc1a7a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Modules">
+      <UniqueIdentifier>{1b92a2c2-e0a2-44ff-84e5-4b28c0f340d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Modules\Basic">
+      <UniqueIdentifier>{0bc559ae-ad24-4fa7-9d11-d8a65ec7e910}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Modules\FileEditor">
+      <UniqueIdentifier>{6e931b3c-aa72-4e22-81f1-583ad4f9d58b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Modules\LogWriter">
+      <UniqueIdentifier>{54c5878b-caa9-423e-ad17-fa0cc307047b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Modules\Basic\FileBase">
+      <UniqueIdentifier>{1f6b8467-8994-490f-b954-0daeb14ac131}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Modules\LanguageFileEditor">
+      <UniqueIdentifier>{343c68ef-755c-47ee-8571-56e98fe1798b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Languages">
+      <UniqueIdentifier>{45c73dfa-d4b5-490c-a33a-1a97532c9418}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Languages\zh-cn">
+      <UniqueIdentifier>{ac4f3490-6cee-4bb3-946c-ec85317eb1c6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="functions\Story.cpp">
+      <Filter>源文件\Functions</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\Basic\FileBase\FileBase.cpp">
+      <Filter>源文件\Modules\Basic\FileBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\FileEditor\FileEditor.cpp">
+      <Filter>源文件\Modules\FileEditor</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\LogWriter\LogWriter.cpp">
+      <Filter>源文件\Modules\LogWriter</Filter>
+    </ClCompile>
+    <ClCompile Include="Modules\LanguageFileEditor\LanguageFileEditor.cpp">
+      <Filter>源文件\Modules\LanguageFileEditor</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Modules\Basic\FileBase\FileBase.h">
+      <Filter>源文件\Modules\Basic\FileBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\FileEditor\FileEditor.h">
+      <Filter>源文件\Modules\FileEditor</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\LogWriter\LogWriter.h">
+      <Filter>源文件\Modules\LogWriter</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Languages\zh-cn\Story.lang">
+      <Filter>源文件\Languages\zh-cn</Filter>
+    </None>
   </ItemGroup>
 </Project>
