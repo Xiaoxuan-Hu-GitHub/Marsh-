@@ -1,5 +1,5 @@
 // Filebase.h - Basic file operations.
-// Version: 1.0.0.10
+// Version: 1.0.0.11
 // Written by Xiaoxuan Hu.
 
 #pragma once
@@ -7,7 +7,7 @@
 #include <fstream>
 #include <string>
 
-namespace File {
+namespace File_Xiaoxuan_Hu {
 	class FileBase {
 	private:
 		std::fstream file;

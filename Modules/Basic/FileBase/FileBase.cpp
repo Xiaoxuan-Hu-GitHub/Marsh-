@@ -1,24 +1,24 @@
 // filebase.cpp - Basic file operations.
-// Version: 1.0.0.10
+// Version: 1.0.0.11
 // Written by Xiaoxuan Hu.
 
 #include "Filebase.h"
 
-void File::FileBase::linkToFile(std::string npath) {
+void File_Xiaoxuan_Hu::FileBase::linkToFile(std::string npath) {
 	path = npath;
 	return;
 }
-void File::FileBase::linkToFile(const char* path) {
+void File_Xiaoxuan_Hu::FileBase::linkToFile(const char* path) {
 	std::string tmp = path;
 	linkToFile(tmp);
 	return;
 }
-void File::FileBase::unlinkToFile() {
+void File_Xiaoxuan_Hu::FileBase::unlinkToFile() {
 	path = "";
 	return;
 }
 
-void File::FileBase::rewriteFile(std::string str) {
+void File_Xiaoxuan_Hu::FileBase::rewriteFile(std::string str) {
 	file.open(path.c_str(), std::ios::out);
 	if (!file.is_open()) {
 		unlinkToFile();
@@ -36,12 +36,12 @@ void File::FileBase::rewriteFile(std::string str) {
 	}
 	return;
 }
-void File::FileBase::rewriteFile(const char* str) {
+void File_Xiaoxuan_Hu::FileBase::rewriteFile(const char* str) {
 	std::string tmp = str;
 	rewriteFile(tmp);
 	return;
 }
-void File::FileBase::appendFile(std::string str) {
+void File_Xiaoxuan_Hu::FileBase::appendFile(std::string str) {
 	file.open(path.c_str(), std::ios::app);
 	if (!file.is_open()) {
 		unlinkToFile();
@@ -59,12 +59,12 @@ void File::FileBase::appendFile(std::string str) {
 	}
 	return;
 }
-void File::FileBase::appendFile(const char* str) {
+void File_Xiaoxuan_Hu::FileBase::appendFile(const char* str) {
 	std::string tmp = str;
 	appendFile(tmp);
 	return;
 }
-std::string File::FileBase::readFile() {
+std::string File_Xiaoxuan_Hu::FileBase::readFile() {
 	std::string str = "";
 	file.open(path.c_str(), std::ios::in);
 	if (!file.is_open()) {

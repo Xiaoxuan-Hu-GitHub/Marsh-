@@ -31,14 +31,14 @@
     <Filter Include="源文件\Modules\Basic\FileBase">
       <UniqueIdentifier>{1f6b8467-8994-490f-b954-0daeb14ac131}</UniqueIdentifier>
     </Filter>
-    <Filter Include="源文件\Modules\LanguageFileEditor">
-      <UniqueIdentifier>{343c68ef-755c-47ee-8571-56e98fe1798b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="源文件\Languages">
       <UniqueIdentifier>{45c73dfa-d4b5-490c-a33a-1a97532c9418}</UniqueIdentifier>
     </Filter>
     <Filter Include="源文件\Languages\zh-cn">
       <UniqueIdentifier>{ac4f3490-6cee-4bb3-946c-ec85317eb1c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Modules\LanguageSupport">
+      <UniqueIdentifier>{343c68ef-755c-47ee-8571-56e98fe1798b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -57,8 +57,8 @@
     <ClCompile Include="Modules\LogWriter\LogWriter.cpp">
       <Filter>源文件\Modules\LogWriter</Filter>
     </ClCompile>
-    <ClCompile Include="Modules\LanguageFileEditor\LanguageFileEditor.cpp">
-      <Filter>源文件\Modules\LanguageFileEditor</Filter>
+    <ClCompile Include="Modules\LanguageSupport\LanguageSupport.cpp">
+      <Filter>源文件\Modules\LanguageSupport</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +70,9 @@
     </ClInclude>
     <ClInclude Include="Modules\LogWriter\LogWriter.h">
       <Filter>源文件\Modules\LogWriter</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\LanguageSupport\LanguageSupport.h">
+      <Filter>源文件\Modules\LanguageSupport</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
