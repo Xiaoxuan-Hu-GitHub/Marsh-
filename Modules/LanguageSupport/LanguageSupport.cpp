@@ -3,14 +3,12 @@
 
 #include "../FileEditor/FileEditor.h"
 
-namespace Language {
+namespace Language_Xiaoxuan_Hu {
 	class LanguageBase {
 	private:
 		std::map<std::string, std::string> dictionary;
-		File::FileEditor file;
+		File_Xiaoxuan_Hu::FileEditor file;
 	public:
-		void readFromFile(const char* languageFilePath) {
-
-		}
+		void readFromFile(const char* languageFilePath);
 	};
 }

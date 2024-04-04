@@ -1,5 +1,5 @@
 // FileEditor.h - Class designed for file editing.
-// Version: 1.0.0.4
+// Version: 1.0.0.5
 // Written by Xiaoxuan Hu.
 
 #pragma once
@@ -19,8 +19,8 @@ namespace File_Xiaoxuan_Hu {
 		void linkToFile(const char* fpath, const char* lpath);
 		void unlinkToFile(bool unlinkToLog);
 
-		void createFile(std::string path);
-		void createFile(const char* path);
+		void createFile(std::string path, std::string lpath);
+		void createFile(const char* path, const char* lpath);
 		void removeFile(bool unlinkToLog);
 
 		void rewrite(std::string str);

@@ -1,5 +1,5 @@
 // FileEditor.cpp - Class designed for file editing.
-// Version: 1.0.0.5
+// Version: 1.0.0.6
 // Written by Xiaoxuan Hu.
 
 #include "FileEditor.h"
@@ -35,16 +35,26 @@ void File_Xiaoxuan_Hu::FileEditor::unlinkToFile(bool unlinkToLog = false) {
 	return;
 }
 
+void File_Xiaoxuan_Hu::FileEditor::createFile(std::string path, std::string lpath = "FileEditorLog.log") {
+	linkToFile(path, lpath);
+	rewrite("");
+	return;
+}
+void File_Xiaoxuan_Hu::FileEditor::createFile(const char* path, const char* lpath = "FileEditorLog.log") {
+	linkToFile(path, lpath);
+	rewrite("");
+	return;
+}
 void File_Xiaoxuan_Hu::FileEditor::removeFile(bool unlinkToLog) {
-	remove(path.c_str());
-	log.writeLog("FileEditor FileEditor: Removed file. File editing ends.");
+	File_Xiaoxuan_Hu::FileBase::removeFile();
+	log.writeLog("FileEditor FileEditor: Removed file.");
 	unlinkToFile(unlinkToLog);
 	return;
 }
 
 void File_Xiaoxuan_Hu::FileEditor::rewrite(std::string str) {
 	File_Xiaoxuan_Hu::FileBase::rewriteFile(str);
-	log.writeLog("FileEditor FileEditor: Rewrite file.");
+	log.writeLog(File_Xiaoxuan_Hu::FileBase::ready() ? "FileEditor FileEditor: Rewrite file successfully." : "FileEditor FileEditor: Fail to rewrite file.");
 	return;
 }
 void File_Xiaoxuan_Hu::FileEditor::rewrite(const char* str) {
@@ -54,7 +64,7 @@ void File_Xiaoxuan_Hu::FileEditor::rewrite(const char* str) {
 }
 void File_Xiaoxuan_Hu::FileEditor::append(std::string str) {
 	File_Xiaoxuan_Hu::FileBase::appendFile(str);
-	log.writeLog("FileEditor FileEditor: Append to file.");
+	log.writeLog(File_Xiaoxuan_Hu::FileBase::ready() ? "FileEditor FileEditor: Append to file successfully." : "FileEditor FileEditor: Fail to append to file.");
 	return;
 }
 void File_Xiaoxuan_Hu::FileEditor::append(const char* str) {
@@ -64,6 +74,6 @@ void File_Xiaoxuan_Hu::FileEditor::append(const char* str) {
 }
 std::string File_Xiaoxuan_Hu::FileEditor::read() {
 	std::string str = File_Xiaoxuan_Hu::FileBase::readFile();
-	log.writeLog("FileEditor FileEditor: Read file.");
+	log.writeLog(File_Xiaoxuan_Hu::FileBase::ready() ? "FileEditor FileEditor: Read file successfully." : "FileEditor FileEditor: Fail to read file.");
 	return str;
 }
