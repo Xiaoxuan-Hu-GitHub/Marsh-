@@ -2,9 +2,9 @@
 // Version: 1.0.0.6
 // Written by Xiaoxuan Hu.
 
-#include "FileEditor.h"
-
 #include <cstdio>
+
+#include "FileEditor.h"
 
 void File_Xiaoxuan_Hu::FileEditor::linkToFile(std::string fpath, std::string lpath = "FileEditorLog.log") {
 	File_Xiaoxuan_Hu::FileBase::linkToFile(fpath);

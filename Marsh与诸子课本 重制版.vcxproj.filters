@@ -40,6 +40,9 @@
     <Filter Include="源文件\Modules\LanguageSupport">
       <UniqueIdentifier>{343c68ef-755c-47ee-8571-56e98fe1798b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\Languages\zh-cn\Story">
+      <UniqueIdentifier>{276f26ed-67d5-4fe3-8823-645d66c93a91}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -76,8 +79,8 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Languages\zh-cn\Story.lang">
-      <Filter>源文件\Languages\zh-cn</Filter>
+    <None Include="Languages\zh-cn\Story\Story.lang">
+      <Filter>源文件\Languages\zh-cn\Story</Filter>
     </None>
   </ItemGroup>
 </Project>

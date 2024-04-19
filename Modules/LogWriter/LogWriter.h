@@ -4,9 +4,9 @@
 
 #pragma once
 
-#include "../Basic/FileBase/Filebase.h"
-
 #include <string>
+
+#include "../Basic/FileBase/Filebase.h"
 
 namespace File_Xiaoxuan_Hu {
 	class LogWriter : public FileBase {

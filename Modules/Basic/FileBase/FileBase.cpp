@@ -1,5 +1,5 @@
 // filebase.cpp - Basic file operations.
-// Version: 1.0.0.12
+// Version: 1.0.0.13
 // Written by Xiaoxuan Hu.
 
 #include <cstdio>
@@ -76,7 +76,7 @@ std::string File_Xiaoxuan_Hu::FileBase::readFile() {
 		return str;
 	}
 	while (getline(file, str)) {
-		str += '\n';
+		str += "\r\n";
 		if (file.fail() || file.bad()) {
 			unlinkToFile();
 			str = "";

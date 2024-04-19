@@ -141,7 +141,7 @@
     <ClInclude Include="Modules\LogWriter\LogWriter.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Languages\zh-cn\Story.lang" />
+    <None Include="Languages\zh-cn\Story\Story.lang" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

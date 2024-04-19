@@ -2,10 +2,11 @@
 // Version: 1.0.0.3
 // Written by Xiaoxuan Hu.
 
-#include "LogWriter.h"
+#include <sstream>
 
 #include <Windows.h>
-#include <sstream>
+
+#include "LogWriter.h"
 
 std::string WORD2string(WORD x) {
 	std::stringstream ss;
