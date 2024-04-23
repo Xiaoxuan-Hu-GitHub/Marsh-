@@ -43,6 +43,15 @@
     <Filter Include="源文件\Languages\zh-cn\Story">
       <UniqueIdentifier>{276f26ed-67d5-4fe3-8823-645d66c93a91}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\Modules\UI">
+      <UniqueIdentifier>{362145f9-d24e-4469-932f-29471f2fcefd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\GameData">
+      <UniqueIdentifier>{542ba58f-7230-4763-ad48-3c833223c42c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Modules\User">
+      <UniqueIdentifier>{d3b54c0b-f64d-4fbb-a9b8-d6fe7e56885b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -63,6 +72,9 @@
     <ClCompile Include="Modules\LanguageSupport\LanguageSupport.cpp">
       <Filter>源文件\Modules\LanguageSupport</Filter>
     </ClCompile>
+    <ClCompile Include="Modules\UI\UI.cpp">
+      <Filter>源文件\Modules\UI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Modules\Basic\FileBase\FileBase.h">
@@ -77,10 +89,19 @@
     <ClInclude Include="Modules\LanguageSupport\LanguageSupport.h">
       <Filter>源文件\Modules\LanguageSupport</Filter>
     </ClInclude>
+    <ClInclude Include="Modules\UI\UI.h">
+      <Filter>源文件\Modules\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Modules\User\User.h">
+      <Filter>源文件\Modules\User</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Languages\zh-cn\Story\Story.lang">
       <Filter>源文件\Languages\zh-cn\Story</Filter>
+    </None>
+    <None Include="GameData\UserList.dat">
+      <Filter>源文件\GameData</Filter>
     </None>
   </ItemGroup>
 </Project>

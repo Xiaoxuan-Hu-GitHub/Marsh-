@@ -133,14 +133,18 @@
     <ClCompile Include="Modules\FileEditor\FileEditor.cpp" />
     <ClCompile Include="Modules\LanguageSupport\LanguageSupport.cpp" />
     <ClCompile Include="Modules\LogWriter\LogWriter.cpp" />
+    <ClCompile Include="Modules\UI\UI.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Modules\Basic\FileBase\FileBase.h" />
     <ClInclude Include="Modules\FileEditor\FileEditor.h" />
     <ClInclude Include="Modules\LanguageSupport\LanguageSupport.h" />
     <ClInclude Include="Modules\LogWriter\LogWriter.h" />
+    <ClInclude Include="Modules\UI\UI.h" />
+    <ClInclude Include="Modules\User\User.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="GameData\UserList.dat" />
     <None Include="Languages\zh-cn\Story\Story.lang" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

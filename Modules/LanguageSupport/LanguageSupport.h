@@ -1,5 +1,5 @@
 // LanguageSupport.h - Class designed for language file editing.
-// Version: 1.0.0.0
+// Version: 0.0.0.1
 // Written by Xiaoxuan Hu.
 
 #pragma once
