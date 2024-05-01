@@ -23,7 +23,7 @@ void File_Xiaoxuan_Hu::FileEditor::linkToFile(const char* fpath, const char* lpa
 	linkToFile(tfpath, tlpath);
 	return;
 }
-void File_Xiaoxuan_Hu::FileEditor::unlinkToFile(bool unlinkToLog = false) {
+void File_Xiaoxuan_Hu::FileEditor::unlinkToFile(bool unlinkToLog) {
 	File_Xiaoxuan_Hu::FileBase::unlinkToFile();
 	log.writeLog("FileEditor FileEditor: Unlinked to file. File editing ends.");
 
