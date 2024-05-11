@@ -75,6 +75,9 @@
     <ClCompile Include="Modules\UI\UI.cpp">
       <Filter>源文件\Modules\UI</Filter>
     </ClCompile>
+    <ClCompile Include="Modules\User\User.cpp">
+      <Filter>源文件\Modules\User</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Modules\Basic\FileBase\FileBase.h">

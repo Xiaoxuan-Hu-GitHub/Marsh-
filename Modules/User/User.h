@@ -13,5 +13,7 @@ namespace User_Xiaoxuan_Hu {
 	private:
 		UI_Xiaoxuan_Hu::UI UI;
 		std::string userName;
+	public:
+		void game();
 	};
 }

@@ -1,5 +1,5 @@
 // UI.cpp - APIs for user interface.
-// Version: 0.0.0.2
+// Version: 0.0.0.3
 // Written by Xiaoxuan Hu.
 
 #include <iostream>
@@ -7,6 +7,15 @@
 #include <Windows.h>
 
 #include "UI.h"
+
+void UI_Xiaoxuan_Hu::UI::linkToLanguageFile(const char* path) {
+	lang.readFromLanguageFile(path, "UILog.log");
+	return;
+}
+void UI_Xiaoxuan_Hu::UI::linkToLanguageFile(std::string path) {
+	linkToLanguageFile(path.c_str());
+	return;
+}
 
 void UI_Xiaoxuan_Hu::UI::print(std::string str) {
 	for (size_t i = 0; i < str.size(); i++) {
@@ -22,6 +31,11 @@ void UI_Xiaoxuan_Hu::UI::print(std::string str) {
 					case 'n':
 					{
 						std::cout << std::endl;
+						break;
+					}
+					case 'r':
+					{
+						std::cout << '\r';
 						break;
 					}
 					default:

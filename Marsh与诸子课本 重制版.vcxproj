@@ -134,6 +134,7 @@
     <ClCompile Include="Modules\LanguageSupport\LanguageSupport.cpp" />
     <ClCompile Include="Modules\LogWriter\LogWriter.cpp" />
     <ClCompile Include="Modules\UI\UI.cpp" />
+    <ClCompile Include="Modules\User\User.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Modules\Basic\FileBase\FileBase.h" />
