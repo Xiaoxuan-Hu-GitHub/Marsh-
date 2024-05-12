@@ -4,7 +4,8 @@
 
 #pragma once
 
-#include "../FileEditor/FileEditor.h"
+#include <string>
+
 #include "../LanguageSupport/LanguageSupport.h"
 
 namespace UI_Xiaoxuan_Hu {
@@ -17,6 +18,10 @@ namespace UI_Xiaoxuan_Hu {
 
 		void print(std::string str);
 		void print(const char* str);
+
+		void printWithLanguageFile(std::string str);
+		void printWithLanguageFile(const char* str);
+
 		std::string input();
 	};
 }

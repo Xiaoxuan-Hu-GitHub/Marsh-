@@ -3,6 +3,7 @@
 // Written by Xiaoxuan Hu.
 
 #include <iostream>
+#include <string>
 
 #include <Windows.h>
 
@@ -56,10 +57,20 @@ void UI_Xiaoxuan_Hu::UI::print(std::string str) {
 
 	return;
 }
-
 void UI_Xiaoxuan_Hu::UI::print(const char* str) {
 	std::string tmp = str;
 	print(tmp);
+	return;
+}
+
+void UI_Xiaoxuan_Hu::UI::printWithLanguageFile(std::string str) {
+	print(lang.getValue(str));
+	return;
+}
+
+void UI_Xiaoxuan_Hu::UI::printWithLanguageFile(const char* str) {
+	std::string tmp = str;
+	printWithLanguageFile(tmp);
 	return;
 }
 

@@ -18,5 +18,6 @@ namespace Language_Xiaoxuan_Hu {
 		void readFromLanguageFile(std::string languageFilePath, std::string lpath);
 		void readFromLanguageFile(const char* languageFilePath, const char* lpath);
 		std::string getValue(std::string key);
+		std::string getValue(const char* key);
 	};
 }

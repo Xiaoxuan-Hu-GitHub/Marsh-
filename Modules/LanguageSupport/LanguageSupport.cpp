@@ -47,3 +47,7 @@ void Language_Xiaoxuan_Hu::LanguageBase::readFromLanguageFile(const char* langua
 std::string Language_Xiaoxuan_Hu::LanguageBase::getValue(std::string key) {
 	return dictionary[key];
 }
+std::string Language_Xiaoxuan_Hu::LanguageBase::getValue(const char* key) {
+	std::string tmp = key;
+	return getValue(tmp);
+}
