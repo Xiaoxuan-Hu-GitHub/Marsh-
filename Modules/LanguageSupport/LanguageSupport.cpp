@@ -22,11 +22,15 @@ void Language_Xiaoxuan_Hu::LanguageBase::readFromLanguageFile(std::string langua
 			size_t j;
 			std::string tkey = "", tvalue = "";
 
+			// TODO: ĞŞ¸´×Ö·û´®·Ö¸îÎÊÌâ¡£
+
 			// Get key & value.
 			for (j = 0; j < tmp.size() && tmp[j] != ' ' && tmp[j + 1] != '=' && tmp[j + 2] != ' '; j++)
 				tkey += tmp[j];
 			for (j = j + 4; j < tmp.size() && tmp[j] != '\"'; j++)
 				tvalue += tmp[j];
+			
+			// ASAP.
 
 			dictionary.insert(std::make_pair(tkey, tvalue));
 
