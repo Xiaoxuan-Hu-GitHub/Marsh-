@@ -1,11 +1,12 @@
 // LanguageSupport.cpp - Class designed for language file editing.
-// Version: 0.0.0.1
+// Version: 0.0.0.2
 // Written by Xiaoxuan Hu.
 
 #include <map>
 #include <string>
 
 #include "LanguageSupport.h"
+#include "../Basic/StringUtility/StringUtility.h"
 
 void Language_Xiaoxuan_Hu::LanguageBase::readFromLanguageFile(std::string languageFilePath, std::string lpath = "LanguageSupportLog.log") {
 	std::string cache, tmp = "";
@@ -16,7 +17,7 @@ void Language_Xiaoxuan_Hu::LanguageBase::readFromLanguageFile(std::string langua
 
 	for (size_t i = 0; i < cache.size(); i++) {
 		// Split the whole string.
-		if (cache[i] != '\\' && cache[i + 1] != 'r' && cache[i + 2] != '\\' && cache[i + 3] != 'n')
+		if (Utility_Xiaoxuan_Hu::pendingAnotherLine(cache, i))
 			tmp += cache[i];
 		else {
 			size_t j;
