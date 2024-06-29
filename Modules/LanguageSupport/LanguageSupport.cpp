@@ -1,12 +1,12 @@
 // LanguageSupport.cpp - Class designed for language file editing.
-// Version: 0.0.0.2
+// Version: 0.0.0.3
 // Written by Xiaoxuan Hu.
 
 #include <map>
 #include <string>
 
 #include "LanguageSupport.h"
-#include "../Basic/StringUtility/StringUtility.h"
+#include "../Basic/LanguageFileUtility/LanguageFileUtility.h"
 
 void Language_Xiaoxuan_Hu::LanguageBase::readFromLanguageFile(std::string languageFilePath, std::string lpath = "LanguageSupportLog.log") {
 	std::string cache, tmp = "";
@@ -15,25 +15,21 @@ void Language_Xiaoxuan_Hu::LanguageBase::readFromLanguageFile(std::string langua
 	file.linkToFile(languageFilePath, lpath);
 	cache = file.readFile();
 
-	for (size_t i = 0; i < cache.size(); i++) {
+	for (size_t i = 0; i < cache.size() && !Language_Xiaoxuan_Hu::pendingEnd(cache, i); i++) {
 		// Split the whole string.
-		if (Utility_Xiaoxuan_Hu::pendingAnotherLine(cache, i))
+		if (!Language_Xiaoxuan_Hu::pendingAnotherLine(cache, i))
 			tmp += cache[i];
 		else {
 			size_t j;
 			std::string tkey = "", tvalue = "";
 
-			// TODO: ÐÞ¸´×Ö·û´®·Ö¸îÎÊÌâ¡£
-
 			// Get key & value.
-			for (j = 0; j < tmp.size() && tmp[j] != ' ' && tmp[j + 1] != '=' && tmp[j + 2] != ' '; j++)
+			for (j = 0; j < tmp.size() && tmp[j] != ' '; j++)
 				tkey += tmp[j];
 			for (j = j + 4; j < tmp.size() && tmp[j] != '\"'; j++)
 				tvalue += tmp[j];
-			
-			// ASAP.
 
-			dictionary.insert(std::make_pair(tkey, tvalue));
+			dictionary.insert(std::pair<std::string, std::string>(tkey, tvalue));
 
 			tmp = ""; // Reset.
 		}

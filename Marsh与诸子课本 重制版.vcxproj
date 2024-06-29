@@ -130,7 +130,7 @@
     <ClCompile Include="functions\Story.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Modules\Basic\FileBase\FileBase.cpp" />
-    <ClCompile Include="Modules\Basic\StringUtility\StringUtility.cpp" />
+    <ClCompile Include="Modules\Basic\LanguageFileUtility\LanguageFileUtility.cpp" />
     <ClCompile Include="Modules\FileEditor\FileEditor.cpp" />
     <ClCompile Include="Modules\LanguageSupport\LanguageSupport.cpp" />
     <ClCompile Include="Modules\LogWriter\LogWriter.cpp" />
@@ -139,7 +139,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Modules\Basic\FileBase\FileBase.h" />
-    <ClInclude Include="Modules\Basic\StringUtility\StringUtility.h" />
+    <ClInclude Include="Modules\Basic\LanguageFileUtility\LanguageFileUtility.h" />
     <ClInclude Include="Modules\FileEditor\FileEditor.h" />
     <ClInclude Include="Modules\LanguageSupport\LanguageSupport.h" />
     <ClInclude Include="Modules\LogWriter\LogWriter.h" />

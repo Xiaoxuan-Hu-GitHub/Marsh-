@@ -9,13 +9,12 @@ int main() {
 	def.game();
 	return 0;
 }*/
-
 #include <iostream>
 #include "Modules/LanguageSupport/LanguageSupport.h"
 
 int main() {
 	Language_Xiaoxuan_Hu::LanguageBase lang;
-	lang.readFromLanguageFile("D:/Projects/C++/Marsh与诸子课本 重制版/Languages/zh-cn/Story/Story.lang", "D:/Projects/C++/Marsh与诸子课本 重制版/UILog.log");
+	lang.readFromLanguageFile("D:/Projects/C++/Marsh与诸子课本 重制版/Languages/zh-cn/Story/Story.lang", "C:/Users/25433/Desktop/UILog.log");
 	std::cout << lang.getValue("Story");
 	return 0;
 }

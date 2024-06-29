@@ -52,8 +52,8 @@
     <Filter Include="源文件\Modules\User">
       <UniqueIdentifier>{d3b54c0b-f64d-4fbb-a9b8-d6fe7e56885b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="源文件\Modules\Basic\StringUtility">
-      <UniqueIdentifier>{7206a9c4-9efc-4993-aab6-8340ac38fa3d}</UniqueIdentifier>
+    <Filter Include="源文件\Modules\Basic\LanguageFileUtility">
+      <UniqueIdentifier>{9a2ac76b-f9e2-4128-92ae-153cb5b0b7c3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -81,8 +81,8 @@
     <ClCompile Include="Modules\User\User.cpp">
       <Filter>源文件\Modules\User</Filter>
     </ClCompile>
-    <ClCompile Include="Modules\Basic\StringUtility\StringUtility.cpp">
-      <Filter>源文件\Modules\Basic\StringUtility</Filter>
+    <ClCompile Include="Modules\Basic\LanguageFileUtility\LanguageFileUtility.cpp">
+      <Filter>源文件\Modules\Basic\LanguageFileUtility</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -104,8 +104,8 @@
     <ClInclude Include="Modules\User\User.h">
       <Filter>源文件\Modules\User</Filter>
     </ClInclude>
-    <ClInclude Include="Modules\Basic\StringUtility\StringUtility.h">
-      <Filter>源文件\Modules\Basic\StringUtility</Filter>
+    <ClInclude Include="Modules\Basic\LanguageFileUtility\LanguageFileUtility.h">
+      <Filter>源文件\Modules\Basic\LanguageFileUtility</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -9,7 +9,7 @@ namespace Story_Xiaoxuan_Hu {
 	void inline startGame() {
 		UI_Xiaoxuan_Hu::UI output;
 		output.linkToLanguageFile("../Languages/zh-cn/Story/Story.lang");
-		output.printWithLanguageFile("story");
+		output.printWithLanguageFile("Story");
 		return;
 	}
 }
