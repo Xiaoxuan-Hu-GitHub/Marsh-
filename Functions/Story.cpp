@@ -1,4 +1,4 @@
-// Story.cpp - Functions for long text output.
+// Story.cpp - Story.
 // Version: 0.0.0.1
 // Written by Xiaoxuan Hu.
 
@@ -8,7 +8,7 @@
 namespace Story_Xiaoxuan_Hu {
 	void inline startGame() {
 		UI_Xiaoxuan_Hu::UI output;
-		output.linkToLanguageFile("../Languages/zh-cn/Story/Story.lang");
+		output.linkToLanguageFile("Languages/zh-cn/Story/Story.lang");
 		output.printWithLanguageFile("Story");
 		return;
 	}

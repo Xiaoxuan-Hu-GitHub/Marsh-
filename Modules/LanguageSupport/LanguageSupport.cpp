@@ -1,5 +1,5 @@
 // LanguageSupport.cpp - Class designed for language file editing.
-// Version: 0.0.0.3
+// Version: 0.0.0.4
 // Written by Xiaoxuan Hu.
 
 #include <map>
@@ -8,12 +8,12 @@
 #include "LanguageSupport.h"
 #include "../Basic/LanguageFileUtility/LanguageFileUtility.h"
 
-void Language_Xiaoxuan_Hu::LanguageBase::readFromLanguageFile(std::string languageFilePath, std::string lpath = "LanguageSupportLog.log") {
+void Language_Xiaoxuan_Hu::LanguageBase::readFromLanguageFile(std::string languageFilePath, std::string lpath) {
 	std::string cache, tmp = "";
 
 	dictionary.clear();
 	file.linkToFile(languageFilePath, lpath);
-	cache = file.readFile();
+ 	cache = file.readFile();
 
 	for (size_t i = 0; i < cache.size() && !Language_Xiaoxuan_Hu::pendingEnd(cache, i); i++) {
 		// Split the whole string.
@@ -39,13 +39,14 @@ void Language_Xiaoxuan_Hu::LanguageBase::readFromLanguageFile(std::string langua
 	return;
 }
 
-void Language_Xiaoxuan_Hu::LanguageBase::readFromLanguageFile(const char* languageFilePath, const char* lpath = "LanguageSupportLog.log") {
+void Language_Xiaoxuan_Hu::LanguageBase::readFromLanguageFile(const char* languageFilePath, const char* lpath) {
 	std::string lfpath = languageFilePath, nlpath = lpath;
 	readFromLanguageFile(lfpath, nlpath);
 	return;
 }
 
 std::string Language_Xiaoxuan_Hu::LanguageBase::getValue(std::string key) {
+	std::string tmp = dictionary[key];
 	return dictionary[key];
 }
 std::string Language_Xiaoxuan_Hu::LanguageBase::getValue(const char* key) {

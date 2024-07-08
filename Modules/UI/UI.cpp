@@ -26,7 +26,7 @@ void UI_Xiaoxuan_Hu::UI::print(std::string str) {
 				switch (str[++i]) {
 					case 's':
 					{
-						Sleep((str[i + 1] - '0') * 1000);
+						Sleep((str[++i] - '0') * 1000);
 						break;
 					}
 					case 'n':
@@ -52,7 +52,7 @@ void UI_Xiaoxuan_Hu::UI::print(std::string str) {
 				std::cout << str[i];
 				break;
 			}
-		}
+		} 
 	}
 
 	return;
