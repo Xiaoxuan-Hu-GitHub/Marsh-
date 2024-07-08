@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Functions\Game.cpp" />
     <ClCompile Include="functions\Story.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Modules\Basic\FileBase\FileBase.cpp" />

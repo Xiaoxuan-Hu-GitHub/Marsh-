@@ -84,6 +84,9 @@
     <ClCompile Include="Modules\Basic\LanguageFileUtility\LanguageFileUtility.cpp">
       <Filter>源文件\Modules\Basic\LanguageFileUtility</Filter>
     </ClCompile>
+    <ClCompile Include="Functions\Game.cpp">
+      <Filter>源文件\Functions</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Modules\Basic\FileBase\FileBase.h">
