@@ -10,10 +10,10 @@
 3. 注意事项
 	1. 编写事项
 		1. 本项目使用 **Microsoft Visual Studio 2022 Community** 编写。
-	2. 权利相关事项
+	2. 法律信息
 		1. 本程序与《Marsh与诸子课本》除玩法、情节外没有相关关系。
 		2. 未经许可不得将**任何代码**以**任何形式**用于商业用途。
-		3. 本程序不含任何担保。
+		3. 本程序不含**任何**担保。
 ---
 English.
 # ___Marsh: Revised Version___
@@ -26,3 +26,7 @@ English.
 3. Cautions
     1. Programming cautions
         1. This project is written with **Microsoft Visual Studio 2022 Community**.
+    2. Legal information
+        1. This project has nothing connected to _Marsh_ except the story and playing methods.
+        2. **NO PART OF THIS CODE** should be used for commercial usage in **ANY WAY** without permission.
+        3. This project is provided without **ANY** warranty.
