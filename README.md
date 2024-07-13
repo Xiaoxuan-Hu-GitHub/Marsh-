@@ -1,3 +1,5 @@
+---
+简体中文版。
 # Marsh与诸子课本 重制版
 1. 项目综述
 	1. 本项目是《Marsh与诸子课本》的一个重制版本。
@@ -12,3 +14,9 @@
 		1. 本程序与《Marsh与诸子课本》除玩法、情节外没有相关关系。
 		2. 未经许可不得将**任何代码**以**任何形式**用于商业用途。
 		3. 本程序不含任何担保。
+---
+English.
+# ___Marsh: Revised Version___
+1. General
+    1. This is a revised version of _Marsh_.
+2. How to compile
