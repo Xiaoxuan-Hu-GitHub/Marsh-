@@ -55,6 +55,12 @@
     <Filter Include="源文件\Modules\Basic\LanguageFileUtility">
       <UniqueIdentifier>{9a2ac76b-f9e2-4128-92ae-153cb5b0b7c3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="源文件\Languages\zh-cn\Game">
+      <UniqueIdentifier>{afb02327-bf24-47c8-a24b-3e382b6d8862}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Modules\Basic\StringUtility">
+      <UniqueIdentifier>{7c0eb958-2a6f-412b-8e4c-ad9550084ee6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -87,6 +93,9 @@
     <ClCompile Include="Functions\Game.cpp">
       <Filter>源文件\Functions</Filter>
     </ClCompile>
+    <ClCompile Include="Modules\Basic\StringUtility\StringUtility.cpp">
+      <Filter>源文件\Modules\Basic\StringUtility</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Modules\Basic\FileBase\FileBase.h">
@@ -110,6 +119,9 @@
     <ClInclude Include="Modules\Basic\LanguageFileUtility\LanguageFileUtility.h">
       <Filter>源文件\Modules\Basic\LanguageFileUtility</Filter>
     </ClInclude>
+    <ClInclude Include="Modules\Basic\StringUtility\StringUtility.h">
+      <Filter>源文件\Modules\Basic\StringUtility</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Languages\zh-cn\Story\Story.lang">
@@ -117,6 +129,9 @@
     </None>
     <None Include="GameData\UserList.dat">
       <Filter>源文件\GameData</Filter>
+    </None>
+    <None Include="Languages\zh-cn\Game\Safe.lang">
+      <Filter>源文件\Languages\zh-cn\Game</Filter>
     </None>
   </ItemGroup>
 </Project>

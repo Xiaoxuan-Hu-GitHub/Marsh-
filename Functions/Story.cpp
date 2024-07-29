@@ -6,7 +6,7 @@
 #include "../Modules/UI/UI.h"
 
 namespace Story_Xiaoxuan_Hu {
-	void inline startGame() {
+	void inline startGame() { // Why the word "inline" works is still unknown.
 		UI_Xiaoxuan_Hu::UI output;
 		output.linkToLanguageFile("Languages/zh-cn/Story/Story.lang");
 		output.printWithLanguageFile("Story");
