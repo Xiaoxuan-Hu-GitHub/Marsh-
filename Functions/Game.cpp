@@ -1,12 +1,12 @@
 // Game.cpp - Game cycle.
-// Version: 0.0.0.1
+// Version: 0.0.0.2
 // Written by Xiaoxuan Hu.
 
 #include "../Modules/UI/UI.h"
 #include "../Modules/Basic/StringUtility/StringUtility.h"
 
 namespace Game_Xiaoxuan_Hu {
-	void safe(int& attack, int& defense, int& life) {
+	void inline safe(int& attack, int& defense, int& life) { // Magic word: inline
 		int thing;
 		bool flag;
 		
@@ -41,10 +41,6 @@ namespace Game_Xiaoxuan_Hu {
 			}
 			}
 		} while (flag);
-		return;
-	}
-	void inline game() { // Why the word "inline" works is still unknown.
-
 		return;
 	}
 }

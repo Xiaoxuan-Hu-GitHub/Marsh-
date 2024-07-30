@@ -1,12 +1,12 @@
 // Story.cpp - Story.
-// Version: 0.0.0.1
+// Version: 0.0.0.2
 // Written by Xiaoxuan Hu.
 
 
 #include "../Modules/UI/UI.h"
 
 namespace Story_Xiaoxuan_Hu {
-	void inline startGame() { // Why the word "inline" works is still unknown.
+	void inline story() { // Magic word: inline
 		UI_Xiaoxuan_Hu::UI output;
 		output.linkToLanguageFile("Languages/zh-cn/Story/Story.lang");
 		output.printWithLanguageFile("Story");
