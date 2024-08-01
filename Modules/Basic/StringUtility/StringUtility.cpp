@@ -1,5 +1,5 @@
 // StringUtility.cpp - Utilitys for strings.
-// Version: 0.0.0.0
+// Version: 0.0.0.1
 // Written by Xiaoxuan Hu.
 
 #include <sstream>
@@ -14,7 +14,7 @@ template<typename T> void StringUtility_Xiaoxuan_Hu::stringToNumber(std::string 
 
 	return;
 }
-template<typename T> void StringUtility_Xiaoxuan_Hu::NumberToString(T num, std::string& str) {
+template<typename T> void StringUtility_Xiaoxuan_Hu::numberToString(T num, std::string& str) {
 	std::stringstream ss;
 
 	ss << num;
