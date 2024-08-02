@@ -1,12 +1,15 @@
 // Game.cpp - Game functions.
-// Version: 0.0.0.3
+// Version: 0.0.0.4
 // Written by Xiaoxuan Hu.
 
 #include <vector>
-#include <map>
+
+#include <cstdlib>
+#include <ctime>
 
 #include "../Modules/UI/UI.h"
 #include "../Modules/Basic/StringUtility/StringUtility.h"
+#include "../Modules/Item/Item.cpp"
 
 namespace Game_Xiaoxuan_Hu {
 	void inline safe(int& attack, int& defense, int& life) { // Have a rest.
@@ -94,13 +97,15 @@ namespace Game_Xiaoxuan_Hu {
 		}
 		return;
 	}
-	void change(int& attack, int& defense, int& life, int& gold, std::vector<bool> haveItem, std::map<int, std::string> itemName, std::map<int, std::string> itemRole) { // Change your items.
+	void change(int& attack, int& defense, int& life, int& gold, std::vector<Item>& items) { // Change your items.
 		std::vector<int> js;
 		UI_Xiaoxuan_Hu::UI ui;
-		int choose, jh;
+		int choose, jh, get;
 		bool flag;
 
 		ui.linkToLanguageFile("Languages/zh-cn/Game/Change.lang");
+		srand(time(0));
+
 		do {
 			flag = false;
 			ui.printWithLanguageFile("Start");
@@ -112,22 +117,26 @@ namespace Game_Xiaoxuan_Hu {
 		} while (flag);
 		if (choose == 1) {
 			ui.printWithLanguageFile("List");
-			for (int i = 0; i < 17; i++) {
-				if (haveItem[i]) {
-					std::string tmp;
-					StringUtility_Xiaoxuan_Hu::numberToString(i, tmp);
-					ui.print(tmp + ' ');
-					ui.print(itemName[i] + ' ');
-					ui.print(itemRole[i] + '\n');
-				}
+			for (int i = 1; i < 18; i++) {
+				if (items[i].getNum() != 0)
+					ui.print(items[i].info(true, true, true));
 				else
 					js.push_back(i);
 			}
-			if (haveItem[17]) {
+			switch (items[18].getNum())
+			{
+			case 1: {
 				ui.printWithLanguageFile("18");
+				break;
 			}
-			else
-				js.push_back(17);
+			case 0: {
+				js.push_back(18);
+				break;
+			}
+			default: {
+				break;
+			}
+			}
 
 			do {
 				flag = false;
@@ -135,13 +144,70 @@ namespace Game_Xiaoxuan_Hu {
 				StringUtility_Xiaoxuan_Hu::stringToNumber(ui.input(), jh);
 				if (jh < 1 || jh > 18) {
 					flag = true;
-					ui.printWithLanguageFile("Other");
+					ui.printWithLanguageFile("ItemOther");
 				}
 			} while (flag);
-			if (jh == 18)
-				haveItem[17] = false;
+			if (1 <= jh <= 17)
+				items[jh].setNum(1);
 			else
-				haveItem[jh - 1] = false;
+				if (jh == 18)
+					items[18].setNum(0);
+			get = js[rand() % js.size()];
+			if (1 <= get <= 17)
+				items[get].setNum(1);
+			else
+				if (get == 18)
+					items[18].setNum(1);
+			ui.printWithLanguageFile("Success");
+			ui.print(items[get].info(true, true, false));
+			jc(attack, defense, life, gold, get);
+			switch (jh)
+			{
+			case 1: {
+				attack -= 4;
+				break;
+			}
+			case 2: {
+				attack -= 6;
+				break;
+			}
+			case 3: {
+				attack -= 9;
+				break;
+			}
+			case 4: {
+				defense -= 4;
+				break;
+			}
+			case 5: {
+				defense -= 6;
+				break;
+			}
+			case 6: {
+				defense -= 9;
+				break;
+			}
+			case 7: {
+				life -= 40;
+				break;
+			}
+			case 8: {
+				life -= 60;
+				break;
+			}
+			case 9: {
+				life -= 90;
+				break;
+			}
+			default: {
+				break;
+			}
+			}
+			ui.printWithLanguageFile("End1");
+		}
+		if (choose == 2) {
+			life += 25;
+			ui.printWithLanguageFile("End2");
 		}
 	}
 }
