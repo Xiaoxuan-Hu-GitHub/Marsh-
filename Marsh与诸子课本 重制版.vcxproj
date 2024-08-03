@@ -155,6 +155,7 @@
     <None Include="GameData\UserList.dat" />
     <None Include="Languages\zh-cn\Game\Change.lang" />
     <None Include="Languages\zh-cn\Game\Safe.lang" />
+    <None Include="Languages\zh-cn\Game\Way.lang" />
     <None Include="Languages\zh-cn\Story\Story.lang" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

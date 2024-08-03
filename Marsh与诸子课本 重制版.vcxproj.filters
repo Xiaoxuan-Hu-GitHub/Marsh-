@@ -145,5 +145,8 @@
     <None Include="Languages\zh-cn\Game\Change.lang">
       <Filter>源文件\Languages\zh-cn\Game</Filter>
     </None>
+    <None Include="Languages\zh-cn\Game\Way.lang">
+      <Filter>源文件\Languages\zh-cn\Game</Filter>
+    </None>
   </ItemGroup>
 </Project>

@@ -1,5 +1,5 @@
 // filebase.cpp - Basic file operations.
-// Version: 1.0.0.14
+// Version: 0.0.0.15
 // Written by Xiaoxuan Hu.
 
 #include <cstdio>
@@ -8,7 +8,6 @@
 
 void File_Xiaoxuan_Hu::FileBase::linkToFile(std::string npath) {
 	path = npath;
-	isOk = true;
 	return;
 }
 void File_Xiaoxuan_Hu::FileBase::linkToFile(const char* path) {
@@ -18,7 +17,6 @@ void File_Xiaoxuan_Hu::FileBase::linkToFile(const char* path) {
 }
 void File_Xiaoxuan_Hu::FileBase::unlinkToFile() {
 	path = "";
-	isOk = false;
 	return;
 }
 
@@ -90,8 +88,4 @@ void File_Xiaoxuan_Hu::FileBase::removeFile() {
 	remove(path.c_str());
 	unlinkToFile();
 	return;
-}
-
-bool File_Xiaoxuan_Hu::FileBase::ready() {
-	return isOk;
 }

@@ -1,5 +1,5 @@
 // Game.cpp - Game functions.
-// Version: 0.0.0.4
+// Version: 0.0.0.5
 // Written by Xiaoxuan Hu.
 
 #include <vector>
@@ -12,7 +12,7 @@
 #include "../Modules/Item/Item.cpp"
 
 namespace Game_Xiaoxuan_Hu {
-	void inline safe(int& attack, int& defense, int& life) { // Have a rest.
+	void inline safe(int& attack, int& defense, int& life) { // Weekend rest.
 		int thing;
 		bool flag;
 
@@ -209,5 +209,11 @@ namespace Game_Xiaoxuan_Hu {
 			life += 25;
 			ui.printWithLanguageFile("End2");
 		}
+	}
+	void inline way(int& act) { // Choose a way to go.
+		std::string ways[3];
+		UI_Xiaoxuan_Hu::UI ui;
+
+		ui.linkToLanguageFile("Languages/zh-cn/Game/Way.lang");
 	}
 }

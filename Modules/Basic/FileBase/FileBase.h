@@ -1,5 +1,5 @@
 // Filebase.h - Basic file operations.
-// Version: 1.0.0.12
+// Version: 0.0.0.14
 // Written by Xiaoxuan Hu.
 
 #pragma once
@@ -12,7 +12,6 @@ namespace File_Xiaoxuan_Hu {
 	private:
 		std::fstream file;
 		std::string path = "";
-		bool isOk = false;
 	public:
 		// Basic operation.
 		void linkToFile(std::string path);
@@ -26,8 +25,5 @@ namespace File_Xiaoxuan_Hu {
 		void appendFile(const char* str);
 		std::string readFile();
 		void removeFile();
-
-		// Get status.
-		bool ready();
 	};
 }
