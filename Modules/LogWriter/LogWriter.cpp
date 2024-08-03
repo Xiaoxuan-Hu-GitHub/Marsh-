@@ -26,6 +26,6 @@ void File_Xiaoxuan_Hu::LogWriter::writeLog(std::string log) {
 	SYSTEMTIME t;
 	GetLocalTime(&t);
 	std::string tmp = '[' + StringUtility_Xiaoxuan_Hu::numberToString(t.wYear) + '/' + StringUtility_Xiaoxuan_Hu::numberToString(t.wMonth) + '/' + StringUtility_Xiaoxuan_Hu::numberToString(t.wDay) + ' ' + StringUtility_Xiaoxuan_Hu::numberToString(t.wHour) + ':' + StringUtility_Xiaoxuan_Hu::numberToString(t.wMinute) + ':' + StringUtility_Xiaoxuan_Hu::numberToString(t.wSecond) + '.' + StringUtility_Xiaoxuan_Hu::numberToString(t.wMilliseconds) + ']' + log + "\r\n";
-	File_Xiaoxuan_Hu::FileBase::appendFile(tmp);
+	File_Xiaoxuan_Hu::FileBase::append(tmp);
 	return;
 }

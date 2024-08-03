@@ -20,7 +20,7 @@ void File_Xiaoxuan_Hu::FileBase::unlinkToFile() {
 	return;
 }
 
-void File_Xiaoxuan_Hu::FileBase::rewriteFile(std::string str) {
+void File_Xiaoxuan_Hu::FileBase::rewrite(std::string str) {
 	file.open(path.c_str(), std::ios::out);
 	if (!file.is_open()) {
 		unlinkToFile();
@@ -38,12 +38,12 @@ void File_Xiaoxuan_Hu::FileBase::rewriteFile(std::string str) {
 	}
 	return;
 }
-void File_Xiaoxuan_Hu::FileBase::rewriteFile(const char* str) {
+void File_Xiaoxuan_Hu::FileBase::rewrite(const char* str) {
 	std::string tmp = str;
-	rewriteFile(tmp);
+	rewrite(tmp);
 	return;
 }
-void File_Xiaoxuan_Hu::FileBase::appendFile(std::string str) {
+void File_Xiaoxuan_Hu::FileBase::append(std::string str) {
 	file.open(path.c_str(), std::ios::app);
 	if (!file.is_open()) {
 		unlinkToFile();
@@ -61,12 +61,12 @@ void File_Xiaoxuan_Hu::FileBase::appendFile(std::string str) {
 	}
 	return;
 }
-void File_Xiaoxuan_Hu::FileBase::appendFile(const char* str) {
+void File_Xiaoxuan_Hu::FileBase::append(const char* str) {
 	std::string tmp = str;
-	appendFile(tmp);
+	append(tmp);
 	return;
 }
-std::string File_Xiaoxuan_Hu::FileBase::readFile() {
+std::string File_Xiaoxuan_Hu::FileBase::read() {
 	std::string tmp = "", str = "";
 	file.open(path.c_str(), std::ios::in);
 	if (!file.is_open()) {
@@ -84,8 +84,8 @@ std::string File_Xiaoxuan_Hu::FileBase::readFile() {
 	file.close();
 	return str;
 }
-void File_Xiaoxuan_Hu::FileBase::removeFile() {
-	remove(path.c_str());
+void File_Xiaoxuan_Hu::FileBase::remove() {
+	std::remove(path.c_str());
 	unlinkToFile();
 	return;
 }

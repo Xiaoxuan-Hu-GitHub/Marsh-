@@ -1,5 +1,5 @@
 // FileEditor.cpp - Class designed for file editing.
-// Version: 0.0.0.7
+// Version: 0.0.0.8
 // Written by Xiaoxuan Hu.
 
 
@@ -30,21 +30,21 @@ void File_Xiaoxuan_Hu::FileEditor::createFile(const char* path) {
 	return;
 }
 void File_Xiaoxuan_Hu::FileEditor::removeFile() {
-	File_Xiaoxuan_Hu::FileBase::removeFile();
+	File_Xiaoxuan_Hu::FileBase::remove();
 	return;
 }
 
 void File_Xiaoxuan_Hu::FileEditor::rewrite(std::string str) {
-	File_Xiaoxuan_Hu::FileBase::rewriteFile(str);
+	File_Xiaoxuan_Hu::FileBase::rewrite(str);
 	return;
 }
 void File_Xiaoxuan_Hu::FileEditor::rewrite(const char* str) {
 	std::string tmp = str;
-	rewriteFile(tmp);
+	rewrite(tmp);
 	return;
 }
 void File_Xiaoxuan_Hu::FileEditor::append(std::string str) {
-	File_Xiaoxuan_Hu::FileBase::appendFile(str);
+	File_Xiaoxuan_Hu::FileBase::append(str);
 	return;
 }
 void File_Xiaoxuan_Hu::FileEditor::append(const char* str) {
@@ -53,6 +53,6 @@ void File_Xiaoxuan_Hu::FileEditor::append(const char* str) {
 	return;
 }
 std::string File_Xiaoxuan_Hu::FileEditor::read() {
-	std::string str = File_Xiaoxuan_Hu::FileBase::readFile();
+	std::string str = File_Xiaoxuan_Hu::FileBase::read();
 	return str;
 }

@@ -3,6 +3,7 @@
 // Written by Xiaoxuan Hu.
 
 #include <sstream>
+// <string> has already been included in "StringUtility.h".
 
 #include "StringUtility.h"
 

@@ -19,11 +19,11 @@ namespace File_Xiaoxuan_Hu {
 		void unlinkToFile();
 
 		// File operation.
-		void rewriteFile(std::string str);
-		void rewriteFile(const char* str);
-		void appendFile(std::string str);
-		void appendFile(const char* str);
-		std::string readFile();
-		void removeFile();
+		void rewrite(std::string str);
+		void rewrite(const char* str);
+		void append(std::string str);
+		void append(const char* str);
+		std::string read();
+		void remove();
 	};
 }

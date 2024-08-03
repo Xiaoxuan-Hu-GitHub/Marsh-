@@ -1,5 +1,5 @@
 // LogWriter.h - Class designed for log writing.
-// Version: 1.0.0.3
+// Version: 0.0.0.4
 // Written by Xiaoxuan Hu.
 
 #pragma once
@@ -18,5 +18,16 @@ namespace File_Xiaoxuan_Hu {
 		void unlinkToLog();
 
 		void writeLog(std::string log);
+
+		// You should not use these functions.
+		void linkToFile(std::string path) = delete;
+		void linkToFile(const char* path) = delete;
+		void unlinkToFile() = delete;
+		void rewriteFile(std::string str) = delete;
+		void rewriteFile(const char* str) = delete;
+		void appendFile(std::string str) = delete;
+		void appendFile(const char* str) = delete;
+		std::string readFile() = delete;
+		void removeFile() = delete;
 	};
 }

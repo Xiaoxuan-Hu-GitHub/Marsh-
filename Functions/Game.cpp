@@ -97,7 +97,7 @@ namespace Game_Xiaoxuan_Hu {
 		}
 		return;
 	}
-	void change(int& attack, int& defense, int& life, int& gold, std::vector<Item>& items) { // Change your items.
+	void inline change(int& attack, int& defense, int& life, int& gold, std::vector<Item>& items) { // Change your items.
 		std::vector<int> js;
 		UI_Xiaoxuan_Hu::UI ui;
 		int choose, jh, get;

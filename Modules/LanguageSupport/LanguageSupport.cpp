@@ -13,7 +13,7 @@ void Language_Xiaoxuan_Hu::LanguageBase::readFromLanguageFile(std::string langua
 
 	dictionary.clear();
 	file.linkToFile(languageFilePath);
- 	cache = file.readFile();
+ 	cache = file.read();
 
 	for (size_t i = 0; i < cache.size() && !LanguageUtility_Xiaoxuan_Hu::pendingEnd(cache, i); i++) {
 		// Split the whole string.

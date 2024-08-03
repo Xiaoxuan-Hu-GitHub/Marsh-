@@ -13,8 +13,8 @@ namespace Game_Xiaoxuan_Hu {
 		size_t num = 0;
 		std::string name, role;
 	public:
-		std::string info(bool returnId, bool returnName, bool returnRole);
-		size_t getNum();
-		void setNum(size_t nnum);
+		std::string inline info(bool returnId, bool returnName, bool returnRole);
+		size_t inline getNum();
+		void inline setNum(size_t nnum);
 	};
 }

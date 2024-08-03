@@ -10,7 +10,7 @@
 #include "UI.h"
 
 void UI_Xiaoxuan_Hu::UI::linkToLanguageFile(const char* path) {
-	lang.readFromLanguageFile(path, "UILog.log");
+	lang.readFromLanguageFile(path);
 	return;
 }
 void UI_Xiaoxuan_Hu::UI::linkToLanguageFile(std::string path) {
