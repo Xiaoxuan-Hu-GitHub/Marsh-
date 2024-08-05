@@ -1,5 +1,5 @@
 // UI.h - APIs for user interface.
-// Version: 0.0.0.4
+// Version: 0.0.0.5
 // Written by Xiaoxuan Hu.
 
 #pragma once
@@ -11,7 +11,7 @@
 namespace UI_Xiaoxuan_Hu {
 	class UI {
 	private:
-		Language_Xiaoxuan_Hu::LanguageBase lang;
+		Language_Xiaoxuan_Hu::LanguageSupport lang;
 	public:
 		void linkToLanguageFile(std::string path);
 		void linkToLanguageFile(const char* path);

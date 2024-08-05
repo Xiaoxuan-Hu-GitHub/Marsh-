@@ -1,5 +1,5 @@
 // LanguageSupport.cpp - Class designed for language file editing.
-// Version: 0.0.0.6
+// Version: 0.0.0.7
 // Written by Xiaoxuan Hu.
 
 #include <map>
@@ -8,7 +8,7 @@
 #include "LanguageSupport.h"
 #include "../Basic/LanguageFileUtility/LanguageFileUtility.h"
 
-void Language_Xiaoxuan_Hu::LanguageBase::readFromLanguageFile(std::string languageFilePath) {
+void Language_Xiaoxuan_Hu::LanguageSupport::readFromLanguageFile(std::string languageFilePath) {
 	std::string cache, tmp = "";
 
 	dictionary.clear();
@@ -39,17 +39,17 @@ void Language_Xiaoxuan_Hu::LanguageBase::readFromLanguageFile(std::string langua
 	return;
 }
 
-void Language_Xiaoxuan_Hu::LanguageBase::readFromLanguageFile(const char* languageFilePath) {
+void Language_Xiaoxuan_Hu::LanguageSupport::readFromLanguageFile(const char* languageFilePath) {
 	std::string lfpath = languageFilePath;
 	readFromLanguageFile(lfpath);
 	return;
 }
 
-std::string Language_Xiaoxuan_Hu::LanguageBase::getValue(std::string key) {
+std::string Language_Xiaoxuan_Hu::LanguageSupport::getValue(std::string key) {
 	std::string tmp = dictionary[key];
 	return dictionary[key];
 }
-std::string Language_Xiaoxuan_Hu::LanguageBase::getValue(const char* key) {
+std::string Language_Xiaoxuan_Hu::LanguageSupport::getValue(const char* key) {
 	std::string tmp = key;
 	return getValue(tmp);
 }

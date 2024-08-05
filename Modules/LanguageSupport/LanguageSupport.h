@@ -1,5 +1,5 @@
 // LanguageSupport.h - Class designed for language file editing.
-// Version: 0.0.0.3
+// Version: 0.0.0.4
 // Written by Xiaoxuan Hu.
 
 #pragma once
@@ -10,7 +10,7 @@
 #include "../FileEditor/FileEditor.h"
 
 namespace Language_Xiaoxuan_Hu {
-	class LanguageBase {
+	class LanguageSupport {
 	private:
 		std::map<std::string, std::string> dictionary;
 		File_Xiaoxuan_Hu::FileEditor file;

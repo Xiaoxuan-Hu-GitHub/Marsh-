@@ -1,5 +1,5 @@
 // Game.cpp - Game functions.
-// Version: 0.0.0.6
+// Version: 0.0.0.7
 // Written by Xiaoxuan Hu.
 
 #include <vector>
@@ -10,6 +10,7 @@
 #include "../Modules/UI/UI.h"
 #include "../Modules/Basic/StringUtility/StringUtility.h"
 #include "../Modules/Item/Item.cpp"
+#include "../Modules/LanguageSupport/LanguageSupport.h"
 
 namespace Game_Xiaoxuan_Hu {
 	void inline safe(int& attack, int& defense, int& life) { // Weekend rest.
@@ -117,7 +118,7 @@ namespace Game_Xiaoxuan_Hu {
 		bool flag;
 
 		ui.linkToLanguageFile("Languages/zh-cn/Game/Change.lang");
-		srand(time(0));
+		srand((unsigned)time(0));
 
 		do {
 			flag = false;
@@ -164,13 +165,13 @@ namespace Game_Xiaoxuan_Hu {
 				}
 			}
 			while (flag);
-			if (1 <= jh <= 17)
+			if (jh >= 1 && jh <= 17)
 				items[jh].setNum(1);
 			else
 				if (jh == 18)
 					items[18].setNum(0);
 			get = js[rand() % js.size()];
-			if (1 <= get <= 17)
+			if (get >= 1 && get <= 17)
 				items[get].setNum(1);
 			else
 				if (get == 18)
@@ -239,7 +240,17 @@ namespace Game_Xiaoxuan_Hu {
 	void inline way(int& act) { // Choose a way to go.
 		std::string ways[3];
 		UI_Xiaoxuan_Hu::UI ui;
+		Language_Xiaoxuan_Hu::LanguageSupport dict;
 
 		ui.linkToLanguageFile("Languages/zh-cn/Game/Way.lang");
+		dict.readFromLanguageFile("Languages/zh-cn/Game/Way.lang");
+		srand((unsigned)time(0));
+
+		ui.printWithLanguageFile("Choose");
+		for (int i = 0; i < 3; i++) {
+			int road = rand() % 20;
+			if (road >= 1 && road <= 7)
+				ways[i] = dict.getValue("NormalTest");
+		}
 	}
 }
