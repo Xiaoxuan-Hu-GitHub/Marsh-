@@ -1,5 +1,5 @@
 // Game.cpp - Game functions.
-// Version: 0.0.0.5
+// Version: 0.0.0.6
 // Written by Xiaoxuan Hu.
 
 #include <vector>
@@ -23,77 +23,90 @@ namespace Game_Xiaoxuan_Hu {
 			flag = false;
 			ui.printWithLanguageFile("Choose");
 			StringUtility_Xiaoxuan_Hu::stringToNumber(ui.input(), thing);
-			switch (thing)
-			{
-			case 1: {
-				attack += 2;
-				ui.printWithLanguageFile("1");
-				break;
+			switch (thing) {
+				case 1:
+				{
+					attack += 2;
+					ui.printWithLanguageFile("1");
+					break;
+				}
+				case 2:
+				{
+					defense += 2;
+					ui.printWithLanguageFile("2");
+					break;
+				}
+				case 3:
+				{
+					life += 25;
+					ui.printWithLanguageFile("3");
+					break;
+				}
+				default:
+				{
+					flag = true;
+					ui.printWithLanguageFile("Other");
+					break;
+				}
 			}
-			case 2: {
-				defense += 2;
-				ui.printWithLanguageFile("2");
-				break;
-			}
-			case 3: {
-				life += 25;
-				ui.printWithLanguageFile("3");
-				break;
-			}
-			default: {
-				flag = true;
-				ui.printWithLanguageFile("Other");
-				break;
-			}
-			}
-		} while (flag);
+		}
+		while (flag);
 		return;
 	}
 	void inline jc(int& attack, int& defense, int& life, int& gold, int& a) {
-		switch (a)
-		{
-		case 1: {
-			attack += 4;
-			break;
-		}
-		case 2: {
-			attack += 6;
-			break;
-		}
-		case 3: {
-			attack += 9;
-			break;
-		}
-		case 4: {
-			defense += 4;
-			break;
-		}
-		case 5: {
-			defense += 6;
-			break;
-		}
-		case 6: {
-			defense += 9;
-			break;
-		}
-		case 7: {
-			life += 40;
-			break;
-		}
-		case 8: {
-			life += 60;
-			break;
-		}
-		case 9: {
-			life += 90;
-			break;
-		}
-		case 14: {
-			gold += 10;
-			break;
-		}
-		default:
-			break;
+		switch (a) {
+			case 1:
+			{
+				attack += 4;
+				break;
+			}
+			case 2:
+			{
+				attack += 6;
+				break;
+			}
+			case 3:
+			{
+				attack += 9;
+				break;
+			}
+			case 4:
+			{
+				defense += 4;
+				break;
+			}
+			case 5:
+			{
+				defense += 6;
+				break;
+			}
+			case 6:
+			{
+				defense += 9;
+				break;
+			}
+			case 7:
+			{
+				life += 40;
+				break;
+			}
+			case 8:
+			{
+				life += 60;
+				break;
+			}
+			case 9:
+			{
+				life += 90;
+				break;
+			}
+			case 14:
+			{
+				gold += 10;
+				break;
+			}
+			default:
+				break;
 		}
 		return;
 	}
@@ -114,7 +127,8 @@ namespace Game_Xiaoxuan_Hu {
 				flag = true;
 				ui.printWithLanguageFile("ModeOther");
 			}
-		} while (flag);
+		}
+		while (flag);
 		if (choose == 1) {
 			ui.printWithLanguageFile("List");
 			for (int i = 1; i < 18; i++) {
@@ -123,19 +137,21 @@ namespace Game_Xiaoxuan_Hu {
 				else
 					js.push_back(i);
 			}
-			switch (items[18].getNum())
-			{
-			case 1: {
-				ui.printWithLanguageFile("18");
-				break;
-			}
-			case 0: {
-				js.push_back(18);
-				break;
-			}
-			default: {
-				break;
-			}
+			switch (items[18].getNum()) {
+				case 1:
+				{
+					ui.printWithLanguageFile("18");
+					break;
+				}
+				case 0:
+				{
+					js.push_back(18);
+					break;
+				}
+				default:
+				{
+					break;
+				}
 			}
 
 			do {
@@ -146,7 +162,8 @@ namespace Game_Xiaoxuan_Hu {
 					flag = true;
 					ui.printWithLanguageFile("ItemOther");
 				}
-			} while (flag);
+			}
+			while (flag);
 			if (1 <= jh <= 17)
 				items[jh].setNum(1);
 			else
@@ -161,47 +178,56 @@ namespace Game_Xiaoxuan_Hu {
 			ui.printWithLanguageFile("Success");
 			ui.print(items[get].info(true, true, false));
 			jc(attack, defense, life, gold, get);
-			switch (jh)
-			{
-			case 1: {
-				attack -= 4;
-				break;
-			}
-			case 2: {
-				attack -= 6;
-				break;
-			}
-			case 3: {
-				attack -= 9;
-				break;
-			}
-			case 4: {
-				defense -= 4;
-				break;
-			}
-			case 5: {
-				defense -= 6;
-				break;
-			}
-			case 6: {
-				defense -= 9;
-				break;
-			}
-			case 7: {
-				life -= 40;
-				break;
-			}
-			case 8: {
-				life -= 60;
-				break;
-			}
-			case 9: {
-				life -= 90;
-				break;
-			}
-			default: {
-				break;
-			}
+			switch (jh) {
+				case 1:
+				{
+					attack -= 4;
+					break;
+				}
+				case 2:
+				{
+					attack -= 6;
+					break;
+				}
+				case 3:
+				{
+					attack -= 9;
+					break;
+				}
+				case 4:
+				{
+					defense -= 4;
+					break;
+				}
+				case 5:
+				{
+					defense -= 6;
+					break;
+				}
+				case 6:
+				{
+					defense -= 9;
+					break;
+				}
+				case 7:
+				{
+					life -= 40;
+					break;
+				}
+				case 8:
+				{
+					life -= 60;
+					break;
+				}
+				case 9:
+				{
+					life -= 90;
+					break;
+				}
+				default:
+				{
+					break;
+				}
 			}
 			ui.printWithLanguageFile("End1");
 		}

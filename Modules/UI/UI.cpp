@@ -1,5 +1,5 @@
 // UI.cpp - APIs for user interface.
-// Version: 0.0.0.3
+// Version: 0.0.0.4
 // Written by Xiaoxuan Hu.
 
 #include <iostream>
@@ -21,22 +21,30 @@ void UI_Xiaoxuan_Hu::UI::linkToLanguageFile(std::string path) {
 void UI_Xiaoxuan_Hu::UI::print(std::string str) {
 	for (size_t i = 0; i < str.size(); i++) {
 		switch (str[i]) {
-		case '\\':
-		{
-			switch (str[++i]) {
-			case 's':
+			case '\\':
 			{
-				Sleep((str[++i] - '0') * 1000);
-				break;
-			}
-			case 'n':
-			{
-				std::cout << std::endl;
-				break;
-			}
-			case 'r':
-			{
-				std::cout << '\r';
+				switch (str[++i]) {
+					case 's':
+					{
+						Sleep((str[++i] - '0') * 1000);
+						break;
+					}
+					case 'n':
+					{
+						std::cout << std::endl;
+						break;
+					}
+					case 'r':
+					{
+						std::cout << '\r';
+						break;
+					}
+					default:
+					{
+						std::cout << str[i];
+						break;
+					}
+				}
 				break;
 			}
 			default:
@@ -44,14 +52,6 @@ void UI_Xiaoxuan_Hu::UI::print(std::string str) {
 				std::cout << str[i];
 				break;
 			}
-			}
-			break;
-		}
-		default:
-		{
-			std::cout << str[i];
-			break;
-		}
 		}
 	}
 
