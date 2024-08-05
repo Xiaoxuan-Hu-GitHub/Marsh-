@@ -96,9 +96,6 @@
     <ClCompile Include="Functions\Game.cpp">
       <Filter>源文件\Functions</Filter>
     </ClCompile>
-    <ClCompile Include="Modules\Basic\StringUtility\StringUtility.cpp">
-      <Filter>源文件\Modules\Basic\StringUtility</Filter>
-    </ClCompile>
     <ClCompile Include="Modules\Item\Item.cpp">
       <Filter>源文件\Modules\Item</Filter>
     </ClCompile>

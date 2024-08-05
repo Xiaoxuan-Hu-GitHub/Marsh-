@@ -132,7 +132,6 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Modules\Basic\FileBase\FileBase.cpp" />
     <ClCompile Include="Modules\Basic\LanguageFileUtility\LanguageFileUtility.cpp" />
-    <ClCompile Include="Modules\Basic\StringUtility\StringUtility.cpp" />
     <ClCompile Include="Modules\FileEditor\FileEditor.cpp" />
     <ClCompile Include="Modules\Item\Item.cpp" />
     <ClCompile Include="Modules\LanguageSupport\LanguageSupport.cpp" />
