@@ -1,5 +1,5 @@
 // Game.cpp - Game functions.
-// Version: 0.0.0.7
+// Version: 0.0.0.8
 // Written by Xiaoxuan Hu.
 
 #include <vector>
@@ -10,7 +10,6 @@
 #include "../Modules/UI/UI.h"
 #include "../Modules/Basic/StringUtility/StringUtility.h"
 #include "../Modules/Item/Item.cpp"
-#include "../Modules/LanguageSupport/LanguageSupport.h"
 
 namespace Game_Xiaoxuan_Hu {
 	void inline safe(int& attack, int& defense, int& life) { // Weekend rest.
@@ -237,20 +236,46 @@ namespace Game_Xiaoxuan_Hu {
 			ui.printWithLanguageFile("End2");
 		}
 	}
-	void inline way(int& act) { // Choose a way to go.
+	void inline way(std::string& act) { // Choose a way to go.
+		bool flag;
+		int choose;
+
 		std::string ways[3];
 		UI_Xiaoxuan_Hu::UI ui;
-		Language_Xiaoxuan_Hu::LanguageSupport dict;
 
 		ui.linkToLanguageFile("Languages/zh-cn/Game/Way.lang");
-		dict.readFromLanguageFile("Languages/zh-cn/Game/Way.lang");
 		srand((unsigned)time(0));
 
 		ui.printWithLanguageFile("Choose");
 		for (int i = 0; i < 3; i++) {
-			int road = rand() % 20;
+			int road = rand() % 20 + 1;
 			if (road >= 1 && road <= 7)
-				ways[i] = dict.getValue("NormalTest");
+				ways[i] = "NormalTest";
+			if (road == 8 || road == 9)
+				ways[i] = "SuddenTest";
+			if (road >= 10 && road <= 16)
+				ways[i] = "UnintentionalMeet";
+			if (road == 17 || road == 18)
+				ways[i] = "Shop";
+			if (road == 19)
+				ways[i] = "Meet";
+			if (road == 20)
+				ways[i] = "Weekend";
+			ui.printWithLanguageFile(ways[i]);
+			ui.printWithLanguageFile("Split");
 		}
+
+		do {
+			flag = false;
+			ui.printWithLanguageFile("Prompt");
+			StringUtility_Xiaoxuan_Hu::stringToNumber(ui.input(), choose);
+			if (choose < 1 || choose > 3) {
+				flag = true;
+				ui.printWithLanguageFile("Other");
+			}
+		}
+		while (flag);
+		act = ways[choose - 1];
+		return;
 	}
 }

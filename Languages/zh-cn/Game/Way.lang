@@ -1,3 +1,11 @@
 Choose = "  左侧                             前方                              右侧\n"
 NormalTest = "普通检测"
+SuddenTest = "突击考试"
+UnintentionalMeet = "不期而遇"
+Shop = "虹盛商铺"
+Meet = "风雨际会"
+Weekend = "周末时刻"
+Split = "                          "
+Prompt = "\n1.向左转   2.向前进   3.向右转\n你决定："
+Other = "请输入 1 到 3 之间的整数。"
 #
