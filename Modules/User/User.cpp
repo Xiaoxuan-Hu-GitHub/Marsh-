@@ -10,3 +10,7 @@ void User_Xiaoxuan_Hu::User::game() {
 	Story_Xiaoxuan_Hu::story();
 	return;
 }
+
+void User_Xiaoxuan_Hu::User::hud() {
+
+}

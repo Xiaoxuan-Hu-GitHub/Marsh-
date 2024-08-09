@@ -1,5 +1,5 @@
 // LanguageSupport.cpp - Class designed for language file editing.
-// Version: 0.0.0.7
+// Version: 0.0.0.8
 // Written by Xiaoxuan Hu.
 
 #include <map>
@@ -46,8 +46,14 @@ void Language_Xiaoxuan_Hu::LanguageSupport::readFromLanguageFile(const char* lan
 }
 
 std::string Language_Xiaoxuan_Hu::LanguageSupport::getValue(std::string key) {
-	std::string tmp = dictionary[key];
-	return dictionary[key];
+	std::string tmp;
+	try {
+		tmp = dictionary.at(key);
+	}
+	catch (const std::out_of_range &e) {
+		tmp = "Cannot find translation for " + key + '.';
+	}
+	return tmp;
 }
 std::string Language_Xiaoxuan_Hu::LanguageSupport::getValue(const char* key) {
 	std::string tmp = key;

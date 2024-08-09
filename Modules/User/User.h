@@ -13,8 +13,9 @@ namespace User_Xiaoxuan_Hu {
 	private:
 		UI_Xiaoxuan_Hu::UI UI;
 		std::string userName;
-		int attack, defense, life;
+		int attack, defense, life, level, finish, goal, gold, footstep;
 	public:
 		void game();
+		void hud();
 	};
 }
